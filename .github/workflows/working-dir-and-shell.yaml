@@ -21,7 +21,7 @@ jobs:
 
     display-wd-and-files-info-windows:
         runs-on: windows-latest
-        needs: [display-wd-and-files]
+        needs: [display-wd-and-files] #creating dependency
         defaults:
             run:
                 shell: pwsh
