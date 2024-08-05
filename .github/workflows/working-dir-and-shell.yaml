@@ -1,0 +1,26 @@
+name: working dir and shells
+on: push
+
+jobs:
+    display-wd-and-files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display working directory and list files
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
+
+    display-wd-and-files-info-windows:
+        runs-on: windows-latest
+        steps:
+            - name: Display working directory and list files
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
+
