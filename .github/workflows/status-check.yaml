@@ -9,7 +9,7 @@ jobs:
         run: sleep 10
       - name: Runs on Cancelled
         if: cancelled()
-        run: echo" Runs on Cancelled"
+        run: echo "Runs on Cancelled"
       - name: Runs on Failure
         if: failure()
         run: echo "Run on Failure"
