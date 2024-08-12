@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: Step 1
         run: sleep 10
-      - name: Step 2
-        run: exit 1
       - name: Runs on Cancelled
         if: cancelled()
         run: echo" Runs on Cancelled"
