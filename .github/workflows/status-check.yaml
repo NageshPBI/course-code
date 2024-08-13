@@ -4,9 +4,10 @@ on: [push]
 jobs:
   job1:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - name: Step 1
-        run: sleep 10
+        run: sleep 90
       - name: Step 2
         run: exit 1
       - name: Runs on Cancelled
