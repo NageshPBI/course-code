@@ -7,9 +7,7 @@ jobs:
     timeout-minutes: 1
     steps:
       - name: Step 1
-        run: sleep 90
-      - name: Step 2
-        run: exit 1
+        run: sleep 10
       - name: Runs on Cancelled
         if: cancelled()
         run: echo "Runs on Cancelled"
@@ -21,7 +19,7 @@ jobs:
         run: echo "Run on Success"
       - name: Always run
         if: always()
-        run: echo "Always runn'
+        run: echo "Always runn"
 
 
   job2:
