@@ -21,7 +21,7 @@ jobs:
         run: echo "Run on Success"
       - name: Always run
         if: always()
-        run: echo "Always run"
+        run: echo "Always runn'
 
 
   job2:
