@@ -6,7 +6,7 @@ on:
         description: Operationg Systems
         default: "ubuntu-latest, windows-latest"
         type: string
-      node=version:
+      node-version:
         description: Node Version
         default: "14,15,16"
         type: string
