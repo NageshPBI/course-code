@@ -54,4 +54,5 @@ jobs:
     steps:
     - name: Slack Notifications
       run: |
-          echo "Slack Not ran"
+          echo "Failed workflow": ${{ github.workflow }}
+          echo "Failed Job": ${{ github.job }}
