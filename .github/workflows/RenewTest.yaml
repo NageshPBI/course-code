@@ -25,6 +25,9 @@ jobs:
 
       - name: Renew Secrets
         run: ${{ inputs.renew1 }}
+
+      - name: Renew Secrets
+        run: exit 1
     
   renew-secrets2:
     name: Renew Secrets2
@@ -37,8 +40,7 @@ jobs:
       - name: Renew Secrets
         run: ${{ inputs.renew2 }}
 
-      - name: Renew Secrets
-        run: exit 1
+      
 
   SlackFailure:
     name: Slack Notifications
