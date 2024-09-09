@@ -25,7 +25,7 @@ jobs:
         run: echo "Renew Secrets1"
 
       - name: Run Some build steps
-        run: exit 1
+        run: echo "Renew Secrets1"
     continue-on-error: false
 
   SlackFailure:
