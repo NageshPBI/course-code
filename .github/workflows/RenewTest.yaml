@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Renew Secrets
-        run: ${{ inputs.renew2 }}
+        run: echo ${{ inputs.renew2.description }}
 
       
 
