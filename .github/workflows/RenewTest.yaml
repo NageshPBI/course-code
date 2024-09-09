@@ -1,0 +1,36 @@
+name: Renew Secrets
+on: 
+  workflow_dispatch
+
+jobs:
+  renew-secrets1:
+    name: Renew Secrets1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Renew Secrets
+        run: echo "Renew Secrets1"
+    
+renew-secrets2:
+    name: Renew Secrets2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Renew Secrets
+        run: echo "Renew Secrets1"
+
+      - name: Run Some build steps
+        run: exit 1
+
+  job2:
+    name: Slack Notifications
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+    - name: Slack Notifications
+      run: |
+          echo "Slack Not ran"
