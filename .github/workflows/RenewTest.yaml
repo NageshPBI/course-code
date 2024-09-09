@@ -12,6 +12,7 @@ jobs:
 
       - name: Renew Secrets
         run: echo "Renew Secrets1"
+    continue-on-error: false
     
   renew-secrets2:
     name: Renew Secrets2
@@ -25,11 +26,12 @@ jobs:
 
       - name: Run Some build steps
         run: exit 1
+    continue-on-error: false
 
   SlackFailure:
     name: Slack Notifications
     runs-on: ubuntu-latest
-    if: failure()
+    if: ${{ failure() }}
     steps:
     - name: Slack Notifications
       run: |
