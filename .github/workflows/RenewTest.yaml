@@ -4,7 +4,7 @@ on:
     inputs:
       renew1:
         description: DEV
-        required: false
+        required: true
         type: boolean
         default: true
 
@@ -36,6 +36,9 @@ jobs:
 
       - name: Renew Secrets
         run: ${{ inputs.renew2 }}
+
+      - name: Renew Secrets
+        run: exit 1
 
   SlackFailure:
     name: Slack Notifications
