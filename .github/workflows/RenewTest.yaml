@@ -28,6 +28,7 @@ jobs:
 
       - name: Renew Secrets
         run: exit 1
+    continue-on-error: false
     
   renew-secrets2:
     name: Renew Secrets2
@@ -39,6 +40,7 @@ jobs:
 
       - name: Renew Secrets
         run: echo ${{ inputs.renew2.description }}
+    continue-on-error: false
 
       
 
