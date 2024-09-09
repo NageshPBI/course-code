@@ -28,7 +28,7 @@ jobs:
 
       - name: Renew Secrets
         run: exit 1
-    continue-on-error: false
+        continue-on-error: true
     
   renew-secrets2:
     name: Renew Secrets2
