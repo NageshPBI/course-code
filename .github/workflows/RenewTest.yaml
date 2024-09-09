@@ -1,4 +1,4 @@
-name: Renew Secrets
+name: Renew Test
 on: 
   workflow_dispatch
 
