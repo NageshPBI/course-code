@@ -1,31 +1,42 @@
 name: Renew Test
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      renew1:
+        description: DEV
+        required: true
+        type: boolean
+        default: true
+
+      renew2:
+        description: PROD
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   renew-secrets1:
     name: Renew Secrets1
+    if: ${{ inputs.renew1 == 'DEV' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Renew Secrets
-        run: echo "Renew Secrets1"
+        run: ${{ inputs.renew1 }}
     continue-on-error: false
     
   renew-secrets2:
     name: Renew Secrets2
+    if: ${{ inputs.renew1 == 'PROD' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Renew Secrets
-        run: echo "Renew Secrets1"
-
-      - name: Run Some build steps
-        run: echo "Renew Secrets1"
+        run: ${{ inputs.renew2 }}
     continue-on-error: false
 
   SlackFailure:
