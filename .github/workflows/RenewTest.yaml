@@ -13,7 +13,7 @@ jobs:
       - name: Renew Secrets
         run: echo "Renew Secrets1"
     
-renew-secrets2:
+  renew-secrets2:
     name: Renew Secrets2
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +26,7 @@ renew-secrets2:
       - name: Run Some build steps
         run: exit 1
 
-  job2:
+  SlackFailure:
     name: Slack Notifications
     runs-on: ubuntu-latest
     if: failure()
